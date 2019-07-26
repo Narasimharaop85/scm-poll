@@ -4,7 +4,7 @@ pipeline{
         stage("build")
         {
             steps{
-                sh 'echo "hai naveenpadmaja"'
+                sh 'echo "hai padmajanaveen"'
             }
         }
         stage('BuildMore')
