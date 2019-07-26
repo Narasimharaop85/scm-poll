@@ -1,12 +1,30 @@
 pipeline{
-agent any
-stages{
-stage('build')
-{
-steps{
-echo "hai naveen"
+    agent any
+    stages{
+        stage("build")
+        {
+            steps{
+                sh 'echo "hai padmaja"'
+            }
+        }
+        stage('BuildMore')
+        {
+            steps
+            {
+                
+                sh '''
+                echo "multi shell steps work"
+                ls -l
+                '''
+            }
+        }
+        stage('fibonacciSeries')
+        {
+            steps
+            {
+                
+                sh '/root/.jenkins/scripts/fibo.sh'
+            }
+        }
+    }
 }
-}
-}
-}
-
